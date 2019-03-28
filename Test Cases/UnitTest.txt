@@ -1,0 +1,45 @@
+// tests the timer and whether it updates appropriately
+function testAdd () {
+   add();
+   if (add.seconds <= 59 && add.minutes <= 59) {
+      <h1> The add function test has passed test</h1>
+     return true;
+   }
+   else {
+    <h1> The add function test has failed test</h1>
+     return false;
+   }
+}
+
+// tests the clear function and whether it clears the timer and board when clicked
+function testClear () {
+  clear.onclick();
+  if (timer.seconds === 0 && timer.minutes === 0 && timer.hours === 0 && h6.textContent === "00:00:00") {
+    <h1> The clear function has passed test </h1>
+     return true;
+   }
+  else {
+    <h1> The clear function has failed test </h1>
+    return false;
+  }
+}
+
+// tests if game checks the solution and the user inputs match correctly and correctly ouputs the checked solution 
+function testCheckSolve () {
+  for(i=0; i<9; i++)
+    {
+    	a = Number(solution[i*9]) + Number(solution[(i*9)+1]) + Number(solution[(i*9)+2]) + Number(solution[(i*9)+3]) + Number(solution[(i*9)+4]) + Number(solution[(i*9)+5]) + Number(solution[(i*9)+6]) + Number(solution[(i*9)+7]) + Number(solution[(i*9)+8]);
+      b = Number(solution[i]) + Number(solution[i+9]) + Number(solution[i+18]) + Number(solution[i+27]) + Number(solution[i+36]) + Number(solution[i+45]) + Number(solution[i+54]) + Number(solution[i+63]) + Number(solution[i+72]);
+
+   if ( a!=45 || b !=45)
+     {
+       sort();
+     }
+      <h1> the checkSolve function has passed the test </h1> 
+      return true; 
+    }
+  else {
+    <h1> the checkSolution function has failed test </h1> 
+    return false; 
+  }
+}
