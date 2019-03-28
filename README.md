@@ -1,5 +1,5 @@
 # Doku-Game 
-This is the 3rd devliverable of group 21.  
+This is the 3rd deliverable of group 21.  
  Members:
 Adam Wong Chew-Onn,  
  Tasfia Alam,  
